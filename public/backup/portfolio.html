@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% spaceless %}
+
+<h1 class="page-title">Here are a bunch of things I've done</h1>
+
+<section class="gallery">
+	
+	{% for project in projects %}
+		
+		<a href="/portfolio/{{ project.slug}}" class="gallery-item">
+			<h2 class="gallery-item-title">{{ project.title }}</h2>
+			<img src="{{ project.image }}" alt="{{ project.description }}" />
+			<p class="gallery-item-description">{{ project.description }}</p>
+			<div class="gallery-item-tags">{% for tag in project.tags %}<span class="gallery-item-tag">{{ tag }}</span>{% endfor %}</div>
+		</a>
+		
+	{% endfor %}
+	
+	
+</section>
+
+
+
+{% endspaceless %}
+{% endblock %}

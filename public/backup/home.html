@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block container_classes %}hero-container{% endblock container_classes %}
+
+{% block content %}
+{% spaceless %}
+
+
+
+<section class="hero huge image dark-text white-sands">
+	<h2>Bryan Potter</h2>
+	<h1><strong>Front-end developer</strong></h1>
+</section>
+
+<section class="profile clearfix">
+	
+	<div class="profile-image" style="background-image: url('http://potterbm.com/media/profile.jpg');"></div>
+	
+	<div class="profile-info">
+		<h2>A little about me</h2>
+		
+		<p>I started making websites for fun 5 years ago, and I'm still excited to be doing it full-time. I enjoy the challenge of creating complex and responsive layouts using just CSS3, and cleanly-written, maintainable code makes me smile.</p>
+		
+		<p>I can use almost any language or framework, but my two favorites are Python and Ruby on Rails. I wish there was such a thing as Python on Rails, but then maybe you'd have to call it Pyth-on Rails and some people probably wouldn't get it and would be all confused.</p>
+		
+		<p>Anyway, I live and work in Denver, and I love this city. When I'm not making awesome websites you can find me outside climbing rocks or riding a longboard.</p>
+	</div>
+	
+</section>
+
+<section class="showcase clearfix">
+	
+	{% for project in projects %}
+		
+		<a href="/portfolio/{{ project.slug}}" class="image showcase-item {% cycle 'showcase-item-full' 'showcase-item-short' 'showcase-item-half' 'showcase-item-half' %}" style="background-image: url('http://potterbm.com{{ project.image }}');">
+			<div class="showcase-item-info">
+				<h2 class="showcase-item-title">{{ project.title }}</h2>
+				<p class="showcase-item-description">{{ project.description }}</p>
+				<div class="showcase-item-tags">{% for tag in project.tags %}<span class="showcase-item-tag">{{ tag }}</span>{% endfor %}</div>
+			</div>
+		</a>
+		
+	{% endfor %}
+	
+	
+</section>
+
+<section class="testimonials j-testimonial-slider">
+	<ul>
+		{% for testimonial in testimonials %}
+			<li class="j-testimonial">
+				<blockquote>{{ testimonial.quote }}</blockquote>
+				<cite>{{ testimonial.cite|safe }}</cite>
+			</li>
+		{% endfor %}
+	</ul>
+</section>
+
+
+
+{% endspaceless %}
+{% endblock content %}

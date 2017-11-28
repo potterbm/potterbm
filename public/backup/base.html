@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	{% block meta %}{% endblock %}
+
+	<title>{% block page_title %}Bryan Potter{% endblock page_title %}</title>
+
+	<link rel="stylesheet" type="text/css" href="/static/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="/static/css/font-awesome.css" />
+	<link rel="stylesheet" type="text/css" href="/static/css/potterbm.css" />
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,400italic,600,700,900|Source+Code+Pro:400" />
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,300italic,400,400italic,700,700italic,900,900italic" />
+	{% block css %}{% endblock %}
+
+	<link rel="shortcut icon" href="/media/favicon.ico" />
+	<link rel="apple-touch-icon-precomposed" href="/media/favicon-152.png">
+	<meta name="msapplication-TileImage" content="/media/favicon-152.png">
+
+	
+</head>
+
+<body {% block body_attributes %}{% endblock body_attributes %}>
+
+	{% spaceless %}
+	<header>
+		
+		<div class="site-container">
+			
+			<a href="/" class="hamburger-nav j-hamburger-menu">
+				<div class="hamburger"></div>
+			</a>
+			
+			<nav class="social left">
+				<a href="mailto:potterbm@gmail.com"><span class="fa fa-envelope"></span></a><a href="http://github.com/potterbm"><span class="fa fa-github"></span></a><a href="http://dribbble.com/potterbm"><span class="fa fa-dribbble"></span></a>
+			</nav>
+			
+			<a href="/" class="logo-wrapper hidden"><svg viewBox="0 0 200 200" class="logo">
+				<line x1="55" y1="0" x2="55" y2="150" />
+				<circle cx="100" cy="100" r="45" />
+				<line x1="145" y1="50" x2="145" y2="200" />
+			</svg></a>
+			
+			<nav class="right">
+				<a href="/portfolio">Portfolio</a>
+			</nav>
+			
+			<nav class="hamburger-nav-menu">
+				<ul>
+					<li><a href="/portfolio"><span class="fa fa-briefcase"></span> See My Work</a></li>
+					<li><a href="mailto:potterbm@gmail.com"><span class="fa fa-envelope"></span> Email Me</a></li>
+					<li><a href="http://github.com/potterbm"><span class="fa fa-github"></span> Github Profile</a></li>
+					<li><a href="http://dribbble.com/potterbm"><span class="fa fa-dribbble"></span> Dribble Shots</a></li>
+				</ul>
+			</nav>
+			
+		</div>
+		
+	</header>
+	{% endspaceless %}
+
+	<div class="site-container {% block container_classes %}{% endblock container_classes %}">{% block content %}{% endblock content %}</div>
+
+	{% spaceless %}
+	<footer>
+		
+		<div class="site-container">
+			
+			<nav>
+				<h2>Side Projects</h2>
+				<ul>
+					{# <li><a href="/places">places</a></li> #}
+					{# <li><a href="/gadgets">gadgets</a></li> #}
+					<li><a href="http://potterbm.github.io/device-models/">device models</a></li>
+					<li><a href="/typography">fun with typography</a></li>
+					<li><a href="http://codepen.io/potterbm/">codepen</a></li>
+					
+				</ul>
+			</nav>
+			
+			<nav>
+				<h2>What you should hire me for</h2>
+				<p>I do front-end or full stack web development on a variety of technology stacks.</p>
+				<p>Want to know more? Email me at <a href="mailto:potterbm@gmail.com">potterbm@gmail.com</a></p>
+			</nav>
+			
+		</div>
+		
+	</footer>
+	{% endspaceless %}
+
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="/static/js/waypoints.min.js"></script>
+<script src="/static/js/potterbm.js"></script>
+{% block javascript %}{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% spaceless %}
+
+
+<article class="project">
+	
+	<h1 class="project-title">{{ project.title }}</h1>
+	
+	<img src="{{ project.image }}" alt="{{ project.description }}" />
+	
+	{{ project.post|safe }}
+	
+</article>
+
+
+
+{% endspaceless %}
+{% endblock %}
