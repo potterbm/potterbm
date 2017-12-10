@@ -1,3 +1,4 @@
+import github                   from './github.svg';
 import React, { PureComponent } from 'react';
 import styles                   from './styles';
 
@@ -29,25 +30,26 @@ export default class HamburgerNav extends PureComponent {
 
         <nav className={ styles.Menu }>
           <ul>
-            <li>
+            <li className={ styles.MenuItem }>
               <a href="/portfolio">
                 <span className="fa fa-briefcase" /> See My Work
               </a>
             </li>
 
-            <li>
+            <li className={ styles.MenuItem }>
               <a href="mailto:potterbm@gmail.com">
                 <span className="fa fa-envelope" /> Email Me
               </a>
             </li>
 
-            <li>
+            <li className={ styles.MenuItem }>
               <a href="http://github.com/potterbm">
-                <span className="fa fa-github" /> Github Profile
+                <span className={ styles.MenuIcon } dangerouslySetInnerHTML={{ __html: github }} />
+                Github Profile
               </a>
             </li>
 
-            <li>
+            <li className={ styles.MenuItem }>
               <a href="http://dribbble.com/potterbm">
                 <span className="fa fa-dribbble" /> Dribble Shots
               </a>

@@ -11,7 +11,7 @@ export default [
     url         : '/assets/munchery-showcase.png',
   },
   {
-    description : 'Responsive brochure site for an SF airline startup',
+    description : 'Responsive brochure site for an airline startup out of SF',
     longText    : `
     <p>I was excited to work with <a href="http://flyblackbird.com/">Blackbird Airlines</a> because of their simple and clean design aesthetic, and their commitment to getting the details of the projects exactly right. I really enjoyed their focus on making the details of the site delightful for people to experience, and being willing to spend extra time on smaller interactions and animations that aren't obvious at first glance.</p>
 

@@ -12,7 +12,7 @@ export default class Portfolio extends PureComponent {
     return (
       <section className={ styles.Root }>
         { this.props.projects.map(project => (
-          <div className={ styles.ProjectContainer } key={ project.slug }>
+          <div key={ project.slug } className={ styles.ProjectContainer }>
             <Project project={ project } />
           </div>
         )) }

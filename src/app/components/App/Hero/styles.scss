@@ -1,14 +1,25 @@
 .Hero {
   background-position: top center;
 	background-repeat: no-repeat;
-	background-size: cover;
-  background-image: url('/assets/white-sands.jpg');
+	background-size: auto 150%;
+  background-image: url('/assets/white-sands-mobile@2x.jpg');
 	display: block;
   font-size: 1em;
 	overflow: hidden;
-	padding: 8em 0 16rem;
+	padding: 8rem 0 16rem;
 	position: relative;
 	width: 100%;
+
+  @include min-width(tablet) {
+    background-image: url('/assets/white-sands.jpg');
+    background-size: cover;
+    padding: 6rem 0 12rem;
+  }
+
+  @include min-width(desktop) {
+    background-position: 50% 15%;
+    padding: 8rem 0 10rem;
+  }
 }
 
 .Title {

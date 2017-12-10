@@ -40,6 +40,15 @@ module.exports = {
             },
           },
         ]
+      },
+      {
+        test: /\.svg$/,
+        loader: 'svg-inline-loader',
+        options: {
+          classPrefix: true,
+          idPrefix: true,
+          removeSVGTagAttrs: true
+        }
       }
     ]
   },

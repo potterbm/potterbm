@@ -18,7 +18,11 @@ export default class Footer extends PureComponent {
 
           <nav className={ styles.Column }>
             <h2 className={ styles.Title }>What you should hire me for</h2>
-            <p>I do front-end or full stack web development on a variety of technology stacks.</p>
+            <p>
+              I do front-end or full stack web development on a wide variety
+              of languages and frameworks.
+            </p>
+
             <p>
               Want to know more? Email me at
               {' '}<a href="mailto:potterbm@gmail.com">potterbm@gmail.com</a>
