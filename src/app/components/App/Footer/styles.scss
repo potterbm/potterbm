@@ -1,0 +1,106 @@
+.Root {
+	background-color: color(MineShaft);
+	box-sizing: border-box;
+	color: color(Alabaster);
+	display: block;
+	font-size: 0.8rem;
+	margin: 0 auto;
+	padding: 4em 0;
+	text-align: center;
+  display: block;
+
+  @include min-width(tablet) {
+    padding: 2em 10%;
+    text-align: left;
+    width: 100%;
+  }
+}
+
+.Title {
+	color: color(White, 0.5);
+	font-weight: 600;
+	margin: 0;
+  margin-bottom: 1em;
+
+  @include min-width(tablet) {
+    margin-bottom: 0.5em;
+  }
+}
+
+.Column {
+	display: block;
+	padding: 0 2em;
+
+  @include min-width(tablet) {
+    box-sizing: border-box;
+    display: inline-block;
+    min-height: 15em;
+    padding: 2em 4em;
+    text-align: right;
+    vertical-align: top;
+    width: 50%;
+  }
+
+  & + .Column {
+  	border-top: 1px solid color(White, 0.25);
+  	margin-top: 4em;
+  	padding-top: 4em;
+
+    @include min-width(tablet) {
+      border-left: 2px solid color(White, 0.75);
+      border-top: none;
+      margin: 0;
+      padding: 2em 4em;
+      text-align: left;
+    }
+  }
+}
+
+.Column ul {
+	list-style-type: none;
+	display: block;
+	margin: 0;
+	padding: 0;
+	height: auto;
+	width: auto;
+}
+
+.Column p {
+	color: color(White, 0.2);
+	margin: 2em;
+
+  @include min-width(tablet) {
+    margin: 0;
+    margin-bottom: 1em;
+  }
+}
+
+.Column a,
+.Column a:visited,
+.Column a:active
+{
+	color: color(White, 0.3);
+
+	text-decoration: none;
+
+	-webkit-transition: color 0.15s ease-in-out;
+	-o-transition: color 0.15s ease-in-out;
+	transition: color 0.15s ease-in-out;
+}
+
+.Column p a,
+.Column p a:visited,
+.Column p a:active
+{
+	color: color(White, 0.3);
+}
+
+.Column a:hover {
+	color: color(White, 0.4);
+
+    text-decoration: none;
+}
+
+.Column a:active {
+	color: color(Flamingo);
+}

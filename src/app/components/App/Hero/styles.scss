@@ -1,0 +1,37 @@
+.Hero {
+  background-position: top center;
+	background-repeat: no-repeat;
+	background-size: cover;
+  background-image: url('/assets/white-sands.jpg');
+	display: block;
+  font-size: 1em;
+	overflow: hidden;
+	padding: 8em 0 16rem;
+	position: relative;
+	width: 100%;
+}
+
+.Title {
+  color: color(MineShaft);
+	display: block;
+	font-size: 3em;
+	line-height: 1;
+	margin: 0 auto;
+  font-weight: 900;
+	position: relative;
+	text-align: center;
+  text-transform: uppercase;
+	z-index: 1;
+}
+
+.SubTitle {
+  color: color(MineShaft);
+	display: block;
+	font-size: 2em;
+	font-weight: 300;
+	line-height: 1.4;
+	margin: 0 auto;
+	position: relative;
+	text-align: center;
+	z-index: 1;
+}

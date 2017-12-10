@@ -1,0 +1,26 @@
+.Root {
+  background-color: color(Alabaster);
+	display: block;
+
+  @include min-width(tablet) {
+    align-items: stretch;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    padding: 20px 0;
+  }
+}
+
+.ProjectContainer {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+
+  @include min-width(tablet) {
+    flex: 0 0 50%;
+
+    &:nth-of-type(even) {
+      border-left: 1px solid color(PaleSlate, 0.5);
+    }
+  }
+}
