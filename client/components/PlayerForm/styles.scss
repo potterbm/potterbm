@@ -1,0 +1,42 @@
+.Root {
+  align-items: stretch;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+
+  // Account for extra padding on inputs
+  margin: 0 -10px;
+
+  @include min-width(tablet) {
+    margin: 0 -20px;
+  }
+}
+
+.Buttons {
+  box-sizing: border-box;
+  flex: 0 0 100%;
+  padding: 0 10px;
+  text-align: center;
+
+  @include min-width(tablet) {
+    padding: 20px;
+    text-align: right;
+  }
+}
+
+.Cancel {
+  @include button($primary: false);
+}
+
+.Cancel,
+.Submit {
+  display: block;
+  margin: 10px 0;
+  width: 100%;
+
+  @include min-width(tablet) {
+    display: inline-block;
+    margin: 0 10px;
+    width: auto;
+  }
+}

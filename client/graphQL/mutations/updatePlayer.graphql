@@ -1,0 +1,21 @@
+#import "graphQL/fragments/playerFields.graphql"
+
+mutation updatePlayer(
+  $email: String!
+  $firstName: String
+  $id: ID
+  $lastName: String
+  $photo: String
+  $winnings: Float!
+) {
+  updatePlayer(
+    email: $email
+    firstName: $firstName
+    id: $id
+    lastName: $lastName
+    photo: $photo
+    winnings: $winnings
+  ) {
+    ...playerFields
+  }
+}

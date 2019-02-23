@@ -1,14 +1,17 @@
 {
   "presets": [
-    "es2015",
-    "react",
-    "stage-0"
+    [
+      "@babel/preset-env",
+      {
+        "targets": "last 1 version"
+      }
+    ],
+    "@babel/preset-react"
   ],
-
   "plugins": [
-    "jsx-control-statements",
+    "@babel/plugin-proposal-class-properties",
+    "jsx-control-statements"
   ],
-
   "env": {
     "production": {
       "plugins": [

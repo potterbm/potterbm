@@ -1,0 +1,7 @@
+#import "graphQL/fragments/playerFields.graphql"
+
+query players {
+  players {
+    ...playerFields
+  }
+}
