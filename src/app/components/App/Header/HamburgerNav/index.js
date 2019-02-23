@@ -1,4 +1,5 @@
 import github                   from './github.svg';
+import gmail                    from './gmail.svg';
 import React, { PureComponent } from 'react';
 import styles                   from './styles';
 
@@ -38,7 +39,8 @@ export default class HamburgerNav extends PureComponent {
 
             <li className={ styles.MenuItem }>
               <a href="mailto:potterbm@gmail.com">
-                <span className="fa fa-envelope" /> Email Me
+                <span className={ styles.MenuIcon } dangerouslySetInnerHTML={{ __html: gmail }} />
+                Email Me
               </a>
             </li>
 
