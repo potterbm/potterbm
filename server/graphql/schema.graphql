@@ -1,33 +1,15 @@
 module.exports = `
 
 schema {
-  mutation: Mutation
   query: Query
 }
 
-type Mutation {
-  updatePlayer(
-    email: String!
-    firstName: String
-    id: ID
-    lastName: String
-    photo: String
-    winnings: Float!
-  ): Player
-}
-
 type Query {
-  players: [Player]
+  users: [User]
 }
 
-type Player {
-  created: String!
-  email: String!
-  firstName: String!
-  id: ID!
-  lastName: String!
-  photo: String!
-  winnings: Float!
+type User {
+  id: String!
 }
 
 `;

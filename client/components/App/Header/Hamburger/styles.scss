@@ -1,0 +1,53 @@
+.Root {
+  background: none;
+  border: 0;
+  box-shadow: 0;
+  cursor: pointer;
+  display: block;
+  outline: none;
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+    width: 100%;
+  }
+}
+
+$barHeight: 4px;
+
+.Bar {
+  background-color: color(Black);
+  border-radius: $barHeight / 2;
+  display: block;
+  height: $barHeight;
+  left: 25%;
+  opacity: 1;
+  position: absolute;
+  top: calc(50% - #{$barHeight / 2});
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  width: 50%;
+
+  .isActive & {
+    opacity: 0;
+  }
+
+  &:first-of-type {
+    top: calc(25% - #{$barHeight / 2});
+
+    .isActive & {
+      opacity: 1;
+      transform: translateY(3px) rotateZ(225deg);
+    }
+  }
+
+  &:last-of-type {
+    top: calc(75% - #{$barHeight / 2});
+
+    .isActive & {
+      opacity: 1;
+      transform: translateY(-3px) rotateZ(-225deg);
+    }
+  }
+}
