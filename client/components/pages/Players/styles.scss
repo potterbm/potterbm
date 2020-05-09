@@ -1,0 +1,16 @@
+.Root {
+  padding: 20px;
+
+  @include min-width(tablet) {
+    padding: 60px;
+  }
+}
+
+.Add {
+  @include button;
+  margin-top: 10px;
+
+  @include min-width(tablet) {
+    margin-top: 0;
+  }
+}

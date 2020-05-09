@@ -2,9 +2,3 @@ body {
   @include font(400);
   margin: 0;
 }
-
-.Root {
-  background-color: color(WhiteSmoke);
-  min-height: 100vh;
-  overflow: hidden;
-}
