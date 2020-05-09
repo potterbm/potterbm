@@ -1,5 +1,5 @@
 const db = require('../../db');
 
 module.exports = {
-  users: () => [],
+  players: async () => await db.all('SELECT * FROM users'),
 };
