@@ -4,8 +4,8 @@
   "description": "",
   "homepage": "http://potterbm.com",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/potterbm/potterbm.git"
+    "type": "git",
+    "url": "https://github.com/potterbm/potterbm.git"
   },
   "main": "server/index.js",
   "scripts": {

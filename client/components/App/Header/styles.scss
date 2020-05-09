@@ -1,0 +1,45 @@
+.Root {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin: 0 20px;
+  overflow: hidden;
+  padding: 20px 0;
+
+  @include min-width(tablet) {
+    margin: 0 60px;
+    padding: 60px 0;
+  }
+}
+
+.Logo {
+  flex: 0 0 auto;
+  height: 50px;
+  width: 50px;
+}
+
+.Nav {
+  flex: 0 0 auto;
+  position: relative;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+
+  &.isExpanded {
+    transform: none;
+  }
+}
+
+$hamburgerSize: 60px;
+
+.Hamburger {
+  margin-top: -$hamburgerSize / 2;
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  width: $hamburgerSize;
+}
+
+.Link {
+  display: inline-block;
+}
