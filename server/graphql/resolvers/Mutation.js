@@ -1,4 +1,4 @@
-const db = require('../../db');
+const db = require("../../db");
 
 const updatePlayerSQL = `
   UPDATE users
@@ -21,14 +21,16 @@ module.exports = {
     const sql = args.id ? updatePlayerSQL : insertPlayerSQL;
 
     const playerData = await db.run(sql, {
-      '$email'     : args.email,
-      '$firstName' : args.firstName,
-      '$id'        : args.id,
-      '$lastName'  : args.lastName,
-      '$photo'     : args.photo,
-      '$winnings'  : args.winnings,
+      $email: args.email,
+      $firstName: args.firstName,
+      $id: args.id,
+      $lastName: args.lastName,
+      $photo: args.photo,
+      $winnings: args.winnings,
     });
 
-    return await db.get('SELECT * FROM users WHERE id = ?', [playerData.lastID || args.id]);
+    return await db.get("SELECT * FROM users WHERE id = ?", [
+      playerData.lastID || args.id,
+    ]);
   },
 };

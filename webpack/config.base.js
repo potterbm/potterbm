@@ -1,18 +1,15 @@
-const path    = require('path');
-const webpack = require('webpack');
+const path = require('path');
 
-const rootPath = path.resolve(__dirname, '../../');
+const rootPath = path.resolve(__dirname, '../');
 
 module.exports = {
   devtool: 'inline-source-map',
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
-  entry: [
-    path.resolve(rootPath, 'client/index.js')
-  ],
+  entry: [path.resolve(rootPath, 'client/index.js')],
   output: {
     filename: 'bundle.js',
     path: path.resolve(rootPath, 'dist'),
-    publicPath: '/dist/'
+    publicPath: '/dist/',
   },
   module: {
     rules: [
@@ -21,9 +18,9 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           {
-            loader: 'babel-loader'
-          }
-        ]
+            loader: 'babel-loader',
+          },
+        ],
       },
       {
         test: /\.scss$/,
@@ -32,27 +29,27 @@ module.exports = {
           {
             loader: 'style-loader',
             options: {
-              sourceMap: true
-            }
+              sourceMap: true,
+            },
           },
           {
             loader: 'css-loader',
             options: {
               modules: true,
               localIdentName: '[path][name]__[local]--[hash:base64:5]',
-              sourceMap: true
-            }
+              sourceMap: true,
+            },
           },
           {
-            loader: 'sass-loader'
+            loader: 'sass-loader',
           },
           {
-            loader  : 'sass-resources-loader',
-            options : {
+            loader: 'sass-resources-loader',
+            options: {
               resources: path.resolve(rootPath, 'client/styles/index.scss'),
             },
           },
-        ]
+        ],
       },
       {
         test: /\.graphql$/,
@@ -63,22 +60,19 @@ module.exports = {
             options: {
               minify: true,
               output: 'string',
-              removeUnusedFragments: true
-            }
-          }
-        ]
-      }
-    ]
+              removeUnusedFragments: true,
+            },
+          },
+        ],
+      },
+    ],
   },
   plugins: [],
   resolve: {
     alias: {
-      client : path.resolve(rootPath, 'client')
+      client: path.resolve(rootPath, 'client'),
     },
-    extensions: ['.js', '.scss', '.graphql'],
-    modules: [
-      path.resolve(rootPath, 'client'),
-      'node_modules'
-    ]
-  }
-}
+    extensions: ['.js'],
+    modules: ['node_modules'],
+  },
+};

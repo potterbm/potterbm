@@ -1,6 +1,3 @@
-import { combineReducers } from 'redux-immutable';
-import players             from './players';
+import { combineReducers } from 'redux';
 
-export default combineReducers({
-  players,
-});
+export default combineReducers({});
