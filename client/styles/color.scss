@@ -1,17 +1,2 @@
-$colors: (
-  Black:        #000000,
-  Gunmetal:     #2F323F,
-  Isabelline:   #ECECED,
-  Persimmon:    #FE7354,
-  SunsetOrange: #FF5454,
-  White:        #ffffff,
-  Wine:         #6B2737,
-);
-
-@function color($name, $rgba: false) {
-  @if $rgba == false {
-    @return map-get($colors, $name);
-  } @else {
-    @return rgba(map-get($colors, $name), $rgba);
-  }
-}
+$Black: #000000;
+$White: #ffffff;

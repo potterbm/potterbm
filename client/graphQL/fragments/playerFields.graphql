@@ -1,9 +1,0 @@
-fragment playerFields on Player {
-  created
-  email
-  firstName
-  id
-  lastName
-  photo
-  winnings
-}
