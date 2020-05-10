@@ -1,0 +1,57 @@
+.Root {
+  align-items: flex-start;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  max-width: 600px;
+  min-width: 200px;
+  position: fixed;
+  top: 0;
+  width: 20%;
+}
+
+.Link {
+  color: $Black;
+  display: block;
+  flex: 0 1 auto;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  padding: 0.5rem 3rem;
+  text-transform: lowercase;
+  text-decoration: none;
+
+  &:hover {
+    color: $BurntSienna;
+    transition: color 0.3s ease-in-out;
+  }
+}
+
+$interval: 0.3;
+$startTime: 5s;
+
+.Link:nth-child(1) {
+  @include fadeIn(
+    $delay: (
+      $startTime + ($interval * 0),
+    )
+  );
+}
+
+.Link:nth-child(2) {
+  @include fadeIn(
+    $delay: (
+      $startTime + ($interval * 1),
+    )
+  );
+}
+
+.Link:nth-child(3) {
+  @include fadeIn(
+    $delay: (
+      $startTime + ($interval * 2),
+    )
+  );
+}
