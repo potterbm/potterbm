@@ -4,9 +4,9 @@ import styles from './styles.scss';
 
 export default () => (
   <nav className={styles.Root}>
-    <Link className={styles.Link} to="/">
+    {/* <Link className={styles.Link} to="/">
       Home
-    </Link>
+    </Link> */}
 
     {/* <Link className={styles.Link} to="/">
       Articles
