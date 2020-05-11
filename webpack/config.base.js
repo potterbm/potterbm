@@ -27,12 +27,6 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           {
-            loader: 'style-loader',
-            options: {
-              sourceMap: true,
-            },
-          },
-          {
             loader: 'css-loader',
             options: {
               modules: true,

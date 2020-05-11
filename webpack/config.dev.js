@@ -3,6 +3,17 @@ const base = require('./config.base');
 
 const rootPath = path.resolve(__dirname, '../');
 
+const scssRuleIndex = base.module.rules.findIndex(({ test }) => test.test('styles.scss'));
+
+if (scssRuleIndex !== -1) {
+  base.module.rules[scssRuleIndex].use.unshift({
+    loader: 'style-loader',
+    options: {
+      sourceMap: true,
+    },
+  });
+}
+
 const config = {
   ...base,
 
