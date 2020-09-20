@@ -1,15 +1,23 @@
 .Root {
-  align-items: flex-start;
+  align-items: center;
   display: flex;
-  flex-flow: column nowrap;
-  height: 100vh;
+  flex-flow: row nowrap;
   justify-content: center;
-  left: 0;
-  max-width: 600px;
-  min-width: 200px;
-  position: fixed;
-  top: 0;
-  width: 20%;
+  height: 40px;
+  position: static;
+  width: 100vw;
+
+  @include min-width(tablet) {
+    align-items: flex-start;
+    flex-flow: column nowrap;
+    height: 100vh;
+    max-width: 600px;
+    min-width: 200px;
+    left: 0;
+    top: 0;
+    position: fixed;
+    width: 20%;
+  }
 }
 
 .Link {
