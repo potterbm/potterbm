@@ -19,5 +19,9 @@ export default () => (
     <a className={styles.Link} href="mailto:potterbm@gmail.com">
       Email
     </a>
+
+    <a className={styles.Link} href="https://linkedin.com/in/potterbm">
+      LinkedIn
+    </a>
   </nav>
 );

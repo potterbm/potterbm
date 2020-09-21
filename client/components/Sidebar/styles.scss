@@ -2,7 +2,7 @@
   align-items: center;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: center;
+  justify-content: space-around;
   height: 40px;
   position: static;
   width: 100vw;
@@ -10,6 +10,7 @@
   @include min-width(tablet) {
     align-items: flex-start;
     flex-flow: column nowrap;
+    justify-content: center;
     height: 100vh;
     max-width: 600px;
     min-width: 200px;
@@ -23,13 +24,14 @@
 .Link {
   color: $Black;
   display: block;
-  flex: 0 1 auto;
+  flex: 1 1 0;
   font-family: 'Open Sans', sans-serif;
   font-size: 0.8rem;
   font-weight: 400;
-  padding: 0.5rem 3rem;
-  text-transform: lowercase;
+  padding: 0.5rem 1rem;
+  text-align: center;
   text-decoration: none;
+  text-transform: lowercase;
 
   &:hover {
     color: $BurntSienna;
