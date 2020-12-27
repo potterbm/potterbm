@@ -33,6 +33,10 @@
   text-decoration: none;
   text-transform: lowercase;
 
+  @include min-width(tablet) {
+    flex: 0 1 auto;
+  }
+
   &:hover {
     color: $BurntSienna;
     transition: color 0.3s ease-in-out;
