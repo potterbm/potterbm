@@ -1,0 +1,74 @@
+@use '../../styles/animations.scss';
+@use '../../styles/layout.scss';
+
+.Sidebar--Root {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  height: 40px;
+  position: static;
+  width: 100vw;
+
+  @include layout.min-width(tablet) {
+    align-items: flex-start;
+    flex-flow: column nowrap;
+    justify-content: center;
+    height: 100vh;
+    max-width: 600px;
+    min-width: 200px;
+    left: 0;
+    top: 0;
+    position: fixed;
+    width: 20%;
+  }
+}
+
+.Sidebar--Link {
+  color: #111111;
+  display: block;
+  flex: 1 1 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: lowercase;
+
+  @include layout.min-width(tablet) {
+    flex: 0 1 auto;
+  }
+
+  &:hover {
+    color: #3a86ff;
+    transition: color 0.3s ease-in-out;
+  }
+}
+
+$interval: 0.3;
+$startTime: 4s;
+
+.Sidebar--Link:nth-child(1) {
+  @include animations.fadeIn(
+    $delay: (
+      $startTime + ($interval * 0),
+    )
+  );
+}
+
+.Sidebar--Link:nth-child(2) {
+  @include animations.fadeIn(
+    $delay: (
+      $startTime + ($interval * 1),
+    )
+  );
+}
+
+.Sidebar--Link:nth-child(3) {
+  @include animations.fadeIn(
+    $delay: (
+      $startTime + ($interval * 2),
+    )
+  );
+}

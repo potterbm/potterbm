@@ -1,0 +1,44 @@
+@use '../../styles/typography.scss';
+@use '../../styles/animations.scss';
+
+.Home--Section {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 100vh;
+  width: 100%;
+
+  &:first-of-type {
+    min-height: calc(100vh - 40px);
+  }
+}
+
+.Home--SectionTitle {
+  @include typography.primary-title;
+  padding: 2rem 0;
+}
+
+.Home--IntroTitle,
+.Home--Title,
+.Home--SubTitle {
+  @include typography.secondary-title;
+
+  display: block;
+  margin: 0;
+  padding: 1rem 0;
+}
+
+$interval: 1.5s;
+
+.Home--IntroTitle {
+  @include animations.fadeIn($delay: 0s);
+}
+
+.Home--Title {
+  @include animations.fadeIn($delay: $interval * 1);
+}
+
+.Home--SubTitle {
+  @include animations.fadeIn($delay: $interval * 2);
+}
