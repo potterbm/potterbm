@@ -1,5 +1,4 @@
 const bodyParser = require('koa-bodyparser');
-const graphqlApi = require('./graphql');
 const jwt = require('koa-jwt');
 const Koa = require('koa');
 const KoaMount = require('koa-mount');
@@ -19,7 +18,6 @@ app.use(
 );
 
 app.use(bodyParser());
-app.use(graphqlApi());
 app.use(renderApp());
 
 app.listen(process.env.PORT || 3000);
